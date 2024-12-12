@@ -46,6 +46,7 @@ for entry in "${openhwdirs[@]}"; do
 done
 IFS="$saveIFS"
 
+rm -rf */.ipg
 
 cd ${TOP}
 
