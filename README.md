@@ -20,7 +20,7 @@ are available.
 % git tag checkout v2.0
 % ./openhw_products.sh
 
-
+Assume that the tag revisions are meant to be run in order.
 
 
 

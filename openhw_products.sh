@@ -12,17 +12,15 @@ admin_pwd=ipgrid_pwd
 integ_user=james.wilson@ipgrid.com
 integ_pwd=james1234
 
+
 # login as admin to create the company
-#ipg auth login --host ${ipgrid_server} --port ${ipgrid_port} \
-#        --login ${admin_user} --password ${admin_pwd}
+ipg auth login --host ${ipgrid_server} --port ${ipgrid_port} --login ${admin_user} --password ${admin_pwd}
 
 # setup openhw company
-#ipgrid-admin --config ${config_app_rootdir}/config.yaml company create --name openhw --legal-name "OpenHardware" \
-#	--email info@openhw.com --url "http://www.openhw.com"
+ipg auth company create --company openhw --legal-name "OpenHardware" --email info@openhw.com --url "http://www.openhw.com"
 
 # login as James Wilson to do the openhw products
-ipg auth login --host ${ipgrid_server} --port ${ipgrid_port} \
-        --login ${integ_user} --password ${integ_pwd}
+ipg auth login --host ${ipgrid_server} --port ${ipgrid_port} --login ${integ_user} --password ${integ_pwd}
 
 rm -rf */.ipg
 
@@ -56,8 +54,6 @@ for entry in "${openhwdirs[@]}"; do
     # add and commit the product to ipgrid
     ipg prod add .
     ipg prod commit --release $release --quiet
-
-
 done
 IFS="$saveIFS"
 
