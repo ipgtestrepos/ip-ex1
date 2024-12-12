@@ -14,7 +14,7 @@
 // ############################################################################
 module emmu (/*AUTOARG*/
    // Outputs
-   reg_rdata, emesh_access_out, emesh_packet_out,
+   reg_rdata, emesh_access_out, emesh_packet_out, extra_out,
    // Inputs
    wr_clk, rd_clk, nreset, mmu_en, reg_access, reg_packet,
    emesh_access_in, emesh_packet_in, emesh_wait_in
@@ -41,6 +41,7 @@ module emmu (/*AUTOARG*/
    input 	     reg_access;      // valid packet
    input [PW-1:0]    reg_packet;      // packet
    output [31:0]     reg_rdata;       // readback data
+   extra_out [7:0]   reg_data;        // because
    
    //read port
    input 	     rd_clk;          // single clock

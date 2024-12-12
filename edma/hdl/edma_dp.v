@@ -6,7 +6,7 @@
 //#############################################################################
 module edma_dp (/*AUTOARG*/
    // Outputs
-   count, srcaddr, dstaddr, wait_out, access_out, packet_out,
+   count, srcaddr, dstaddr, access_out, packet_out,
    // Inputs
    clk, nreset, master_active, update2d, datamode, ctrlmode,
    stride_reg, count_reg, srcaddr_reg, dstaddr_reg, access_in,
@@ -14,7 +14,7 @@ module edma_dp (/*AUTOARG*/
    );
 
    parameter  AW   = 8;            // divider counter width
-   parameter  PW  = 2*AW+40;      // emesh packet width
+   parameter  PW  = 4*AW+40;      // emesh packet width
    
    // clk, reset, config
    input           clk;           // main clock
@@ -38,7 +38,6 @@ module edma_dp (/*AUTOARG*/
    // datapath interface
    input 	   access_in;   
    input [PW-1:0]  packet_in;     // streaming input data 
-   output 	   wait_out;
    
    output 	   access_out;        
    output [PW-1:0] packet_out;    // output packet (with address)

@@ -37,24 +37,24 @@ module spi_slave_io #( parameter PW = 104  // packet width
    //###############
    //# LOCAL WIRES
    //###############
-   reg 		    access_reg;   
-   reg [1:0] 	    spi_state;   
-   reg [7:0] 	    bit_count; 
-   reg [7:0] 	    command_reg;   
-   reg 		    fetch_command;
-   wire [7:0] 	    rx_data;
-   wire [63:0] 	    tx_data;
-   wire 	    rx_shift;
-   wire 	    tx_load;
-   wire 	    tx_wait;
-   wire 	    ss_sync;
-   wire 	    ss_pulse;
-   wire 	    spi_fetch;
-   wire 	    byte_done;
-   wire 	    shift;
-   wire 	    rx_clk;
-   wire 	    tx_clk;
-   wire 	    next_byte;
+//   reg 		    access_reg;   
+//   reg [1:0] 	    spi_state;   
+//   reg [7:0] 	    bit_count; 
+//   reg [7:0] 	    command_reg;   
+//   reg 		    fetch_command;
+//   wire [7:0] 	    rx_data;
+//   wire [63:0] 	    tx_data;
+//   wire 	    rx_shift;
+//   wire 	    tx_load;
+//   wire 	    tx_wait;
+//   wire 	    ss_sync;
+//   wire 	    ss_pulse;
+//   wire 	    spi_fetch;
+//   wire 	    byte_done;
+//   wire 	    shift;
+//   wire 	    rx_clk;
+//   wire 	    tx_clk;
+//   wire 	    next_byte;
    
    //#################################
    //# MODES: TODO!

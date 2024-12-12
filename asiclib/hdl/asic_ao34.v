@@ -1,17 +1,19 @@
 //#############################################################################
-//# Function: 2-Input Clock Or Gate                                           #
+//# Function: And-Or (ao33) Gate                                              #
 //# Copyright: OH Project Authors. ALl rights Reserved.                       #
 //# License:  MIT (see LICENSE file in OH repository)                         #
 //#############################################################################
 
-module asic_clkor2 #(parameter PROP = "DEFAULT")   (
-    input  a,
-    input  b,
-    output z,
-    output z2
-    );
+module asic_ao34 #(parameter PROP = "DEFAULT")  (
+   input  a0,
+   input  a1,
+   input  a2,
+   input  b0,
+   input  b1,
+   input  b2,
+   output z
+   );
 
-   assign z = a | b;
-   assign z2 = a | b;
+   assign z = (a0 & a1 & a2) | (b0 & b1 & b2);
 
 endmodule
