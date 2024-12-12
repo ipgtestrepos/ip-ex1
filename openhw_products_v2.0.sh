@@ -30,6 +30,8 @@ git checkout v2.0
 # copy the products to the testbench
 TOP=$(pwd)
 
+rm -rf */*.ipg
+
 saveIFS="$IFS"
 for entry in "${openhwdirs[@]}"; do
     IFS='|' read -r name release descr <<< "$entry"
