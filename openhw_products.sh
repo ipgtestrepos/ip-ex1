@@ -35,6 +35,8 @@ openhwdirs=(
     'stdlib|1.1.1|Vectorized Standard Cell Building Blocks'
 )
 
+git checkout v1.0
+
 # copy the products to the testbench
 TOP=$(pwd)
 

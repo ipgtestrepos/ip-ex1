@@ -25,6 +25,8 @@ openhwdirs=(
     'stdlib|1.2.2|Maintenance update'
 )
 
+git checkout v2.0
+
 # copy the products to the testbench
 TOP=$(pwd)
 
